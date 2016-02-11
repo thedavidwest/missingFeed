@@ -1,0 +1,107 @@
+body
+  color: $black
+  letter-spacing: .2em
+  margin: 0px
+  .mf-wrap
+    padding: 25px 150px
+.top-row
+  +outer-container(100%)
+  margin-bottom: 40px
+  .logo
+    +span-columns(3)
+    background:
+      image: url('https://s3-us-west-2.amazonaws.com/dw-missingfeed/mflogo.svg')
+      repeat: no-repeat
+    width: 232px
+    height: 35px
+
+  .tagline
+    +span-columns(9)
+    float: right
+    color: $red
+    font:
+      size: 10px
+    text-transform: uppercase
+    text-align: right
+.middle-row
+  +outer-container(100%)
+  font:
+    size: 16px
+  text-transform: uppercase
+  .side-nav
+    +span-columns(2)
+    ul
+      li
+        padding-bottom: 20px
+        a
+          text-decoration: none
+          color: $black
+          transition: .2s ease-in-out
+          &:hover
+            color: $red
+          span.nav
+            margin-left: 20px
+  .feed-content
+    //+span-columns(9)
+    float: right
+    text-align: right
+    text-transform: initial
+    .video-info
+      float: left
+      padding-top: 25px
+      text-align: left
+      h1
+        //+span-columns(9)
+        //border: 1px solid red
+        font:
+          weight: 500
+          size: 30px
+        margin-bottom: 0px
+        margin-right: 0px
+      p
+        +span-columns(12)
+        //border: 1px solid red
+        color: $red
+        font:
+          size: 12px
+        a
+          text-decoration: underline
+          color: $red
+          transition: .2s ease-in-out
+          text-transform: uppercase
+          &:hover
+            color: $black
+    .next-video
+      float: right
+      margin-top: 25px
+      a.btn
+        text-decoration: underline
+        color: $white
+        transition: .2s ease-in-out
+        text-transform: uppercase
+        &:hover
+          color: $red
+        h2
+          float: left
+          text-align: right
+          background: $red
+          border: 1px solid $red
+          padding: 10px
+          border-radius: 2px
+          font:
+            weight: 500
+          //border: 1px solid red
+          &:hover
+            background: $white
+            border: 1px solid $red
+.bottom-row
+  margin-top: 20px
+  .copyright
+    p
+      font:
+        size: 8px
+      a
+        color: $red
+        transition: .2s ease-in-out
+        &:hover
+          color: $black
