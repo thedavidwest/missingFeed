@@ -1,30 +1,29 @@
+.header
+  display: flex-inline
+  
+
 .video_wrapper
-  width: 80%
+  +outer-container(75%)
   height: 100%
   margin: 0 auto
-  display: flex
-  justify-content: space-around
-  flex-direction: column
-  .feed-content
-    .flex-video
-      position: relative
+  .video_content
+    position: relative
+    .ratio
+      display: block
       width: 100%
-      .ratio
-        display: block
-        width: 100%
-        height: auto
-      iframe
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-    .video-foot
-      .video-info
-        margin-top: 10px
-        h1
-          font:
-            weight: 400
-            size: 1.5em
-            family: $round
-          text-transform: capitalize
+      height: auto
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+  .video_foot
+    .video_info
+      margin-top: 10px
+      h1
+        font:
+          weight: 400
+          size: 1.5em
+          family: $round
+        text-transform: capitalize
