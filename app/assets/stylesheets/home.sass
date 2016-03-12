@@ -1,0 +1,38 @@
+.home
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: columns
+  height: 100vh
+  .home_wrapper
+    .logo
+      margin-bottom: 50px
+      h1
+        font:
+          size: 3em
+          family: $square
+        color: $red
+        margin: 0
+      h5
+        font:
+          size: 1em
+          weight: 100
+        letter-spacing: 0
+        color: $black
+
+    .push_play
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      a
+        width: 100%
+        padding: 10px 0
+        background-color: $red
+        color: $white
+        border-radius: 8px
+        transition: all .4 ease-in-out
+        i
+          font-size: 1.5em
+        &:hover
+          background-color: transparentize($red, .2)
