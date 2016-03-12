@@ -1,8 +1,12 @@
-.mf-wrap
-  .feed-content
-    .flex-video
-      %img.ratio{:src => "http://placehold.it/16x9"}/
-      %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/vW1hv37imjw?rel=0&amp;amp;showinfo=0"}
-    .video-foot
-      .video-info
-        %h1 Snow Patrol - Just Say Yes
+.video_wrapper
+  %img.ratio{:src => "http://placehold.it/16x9"}/
+  %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/vW1hv37imjw?rel=0&amp;amp;showinfo=0"}
+  .video-foot
+    .video-info
+      %h1 Snow Patrol - Just Say Yes
+.wrapper
+  .h_iframe
+    / a transparent image is preferable
+    %img.ratio{:src => "http://placehold.it/16x9"}/
+    %iframe{:allowfullscreen => "", :frameborder => "0", :src => "http://www.youtube.com/embed/WsFWhL4Y84Y"}
+  %p Please scale the "result" window to notice the effect.
