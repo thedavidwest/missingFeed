@@ -1,12 +1,11 @@
 .header
   .header_info
     .logo
-      %h1 MSNGFD
-    .info
-      %h4 created by
-      %a{:href => "http://www.dwst.cc"} DWST
-  .random_button
-    = link_to "random video", pages_videos_path
+      %h1= link_to "MSNGFD", root_path
+  .info
+    %h4 created by
+    %span
+      %a{:href => "http://www.dwst.cc"} dwst
 .video_wrapper
   .video_content
     %img.ratio{:src => "http://placehold.it/16x9"}/
@@ -14,3 +13,5 @@
   .video_foot
     .video_info
       %h1 Snow Patrol - Just Say Yes
+    .random_button
+      = link_to "random video", pages_videos_path
