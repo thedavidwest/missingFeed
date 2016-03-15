@@ -1,0 +1,41 @@
+%p#notice= notice
+.index
+  %h1 Listing Videos
+  %table
+    %thead
+      %tr
+        %th Url
+        %th Artist
+        %th Song
+        %th{:colspan => "3"}
+    %tbody
+      - @videos.each do |video|
+        %tr
+          %td= video.link
+          %td= video.artist
+          %td= video.song
+          %td= link_to 'Show', video
+          %td= link_to 'Edit', edit_video_path(video)
+          %td= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' }
+  %br
+    = link_to 'New Video', new_video_path
+
+.header
+  .header_info
+    .logo
+      %h1= link_to "MSNGFD", root_path
+  .info
+    %h4 created by
+    %span
+      %a{:href => "http://www.dwst.cc"} dwst
+- @video.each do |video|
+  .video_wrapper
+    .video_content
+      %img.ratio{:src => "http://placehold.it/16x9"}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :src => "#{video.link}?rel=0&amp;amp;showinfo=0"}
+    .video_foot
+      .video_info
+        %h1=video.artist
+        %h1=video.song
+      .random_button
+        = link_to "random video", videos_path

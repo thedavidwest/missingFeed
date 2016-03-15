@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :videos
   root 'pages#home'
 
   get 'pages/videos'
