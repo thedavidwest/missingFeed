@@ -14,7 +14,8 @@
       %iframe{:allowfullscreen => "", :frameborder => "0", :src => "#{video.link}?rel=0&amp;amp;showinfo=0"}
     .video_foot
       .video_info
-        %h1=video.artist
+        %h1=(video.artist)
+        %h1 -
         %h1=video.song
       .random_button
         = link_to "random video", videos_path
