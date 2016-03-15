@@ -7,15 +7,16 @@
     %h4 created & curated by
     %span
       %a{:href => "http://www.buywoodrowsell.com", :target => "_blank"} Buy &middot; Woodrow &middot; Sell
-- @video.each do |video|
-  .video_wrapper
-    .video_content
-      %img.ratio{:src => "http://placehold.it/16x9"}/
-      %iframe{:allowfullscreen => "", :frameborder => "0", :src => "#{video.link}?rel=0&amp;amp;showinfo=0"}
-    .video_foot
-      .video_info
-        %h1=(video.artist)
-        %h1 -
-        %h1=video.song
-      .random_button
-        = link_to "random video", videos_path
+.mobile_container
+  - @video.each do |video|
+    .video_wrapper
+      .video_content
+        %img.ratio{:src => "http://placehold.it/16x9"}/
+        %iframe{:allowfullscreen => "", :frameborder => "0", :src => "#{video.link}?rel=0&amp;amp;showinfo=0"}
+      .video_foot
+        .video_info
+          %h1=(video.artist)
+          %h1 -
+          %h1=video.song
+        .random_button
+          = link_to "random video", videos_path
