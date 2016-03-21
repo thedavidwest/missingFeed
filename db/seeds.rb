@@ -5,7 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create(email: 'thedavidwest@gmail.com', password: 'msngfdtest')
 # Add Videos in Bulk
 Video.create(link: 'https://www.youtube.com/embed/FTQbiNvZqaY', artist: 'Toto', song: 'Africa')
 Video.create(link: 'https://www.youtube.com/embed/dQw4w9WgXcQ', artist: 'Rick Astley', song: 'Never Gonna Give You Up')
