@@ -12,5 +12,23 @@
 </head>
 <body>
   <%= yield %>
+
+<script>
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+    }
+    
+    function onPlayerStateChange(event) {
+        if(event.data === 0) {
+            location.reload (true);
+        }
+    }
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
