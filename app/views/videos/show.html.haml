@@ -1,0 +1,23 @@
+.header
+  .header_info
+    .logo
+      %h1= link_to "MSNGFD", root_path
+  .info
+    %h4 created & curated by
+    %span
+      %a{:href => "http://www.dwst.cc", :target => "_blank"} dwst
+.mobile_container
+  .video_wrapper
+    .video_content
+      %img.ratio{:src => "http://placehold.it/16x9"}/
+      %iframe#player{:allowfullscreen => "", :frameborder => "0", :src => "#{@video.link}?rel=0&amp;amp;showinfo=0;enablejsapi=1"}
+    .video_foot
+      .video_info
+        %h1= @video.artist
+        %h1 -
+        %h1= @video.song
+= link_to 'Edit', edit_video_path(@video)
+|
+\#{link_to 'Back to Random', videos_path}
+|
+\#{link_to 'Back to All', pages_videos_path}

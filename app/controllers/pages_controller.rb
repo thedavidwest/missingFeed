@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
-  def home
-  end
+  before_action :set_video, only: [:show, :edit, :update, :destroy]
 
-  def about
-  end
-
-  def music
+  def videos
+    @video = Video.all
   end
 end

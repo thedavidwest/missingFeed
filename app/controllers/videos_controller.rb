@@ -4,10 +4,12 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @video = Video.order("RANDOM()").limit(1)
-    @videos = Video.all
+    @videos = Video.order("RANDOM()").limit(1)
+    @video = Video.all
   end
-
+  def videos
+    @video = Video.all
+  end
   # GET /videos/1
   # GET /videos/1.json
   def show

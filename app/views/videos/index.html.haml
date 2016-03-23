@@ -8,7 +8,7 @@
     %span
       %a{:href => "http://www.dwst.cc", :target => "_blank"} dwst
 .mobile_container
-  - @video.each do |video|
+  - @videos.each do |video|
     .video_wrapper
       .video_content
         %img.ratio{:src => "http://placehold.it/16x9"}/
@@ -18,8 +18,11 @@
           %h1=video.artist
           %h1 -
           %h1=video.song
-        .random_button
-          = link_to "random video", videos_path
+        .buttons
+          .random_button
+            = link_to "random video", videos_path
+          .showall_button
+            = link_to "all videos", pages_videos_path
 
 
 %script{:src => "https://www.youtube.com/iframe_api", :type => "text/javascript"}

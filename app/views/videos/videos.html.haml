@@ -15,6 +15,10 @@
         %img.ratio{:src => "http://placehold.it/16x9"}/
         %iframe#player{:allowfullscreen => "", :frameborder => "0", :src => "#{video.link}?rel=0&amp;amp;showinfo=0;enablejsapi=1"}
       .video_foot
-        .video_info.all_foot
-          %h1.all_foot
-            = (link_to(video.artist, video_path(video))+'-'+link_to(video.song, video_path(video))).html_safe
+        = link_to 'video', videos_video_path(video)
+        .video_info
+          %h1
+            = video.artist
+          %h1 -
+          %h1
+            = video.song
