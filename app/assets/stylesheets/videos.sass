@@ -73,6 +73,7 @@
         color: $red !important
         font-size: .8em !important
         text-decoration: underline !important
+        padding: 10px 0 !important
         &:hover
           color: transparentize($red, .5) !important
       .video_info
@@ -128,6 +129,25 @@
               weight: 400
             &:hover
               color: transparentize($red, .2)
+    .user_links
+      a
+        width: 100%
+        color: $red
+        transition: all .4s ease-in-out
+        //text-decoration: underline
+        padding-right: 5px
+        border-right: 1px solid $red
+        &:last-child
+          border-right: none
+        font:
+          size: .8em
+          family: $round
+          weight: 400
+        &:hover
+          color: transparentize($red, .2)
+      @media only screen and (max-width: 1100px)
+        margin: 0 auto
+        text-align: center
 .back_button
   text-align: left
   a

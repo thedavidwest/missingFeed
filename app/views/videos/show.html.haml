@@ -16,8 +16,7 @@
         %h1= @video.artist
         %h1 -
         %h1= @video.song
-= link_to 'Edit', edit_video_path(@video)
-|
-\#{link_to 'Back to Random', videos_path}
-|
-\#{link_to 'Back to All', pages_videos_path}
+    .user_links
+      = link_to 'Edit', edit_video_path(@video)
+      \#{link_to 'Back to Random', videos_path}
+      \#{link_to 'Back to All', pages_videos_path}
