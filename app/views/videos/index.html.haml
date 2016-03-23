@@ -15,8 +15,26 @@
         %iframe#player{:allowfullscreen => "", :frameborder => "0", :src => "#{video.link}?rel=0&amp;amp;showinfo=0;autoplay=1;enablejsapi=1"}
       .video_foot
         .video_info
-          %h1=(video.artist)
+          %h1=video.artist
           %h1 -
           %h1=video.song
         .random_button
           = link_to "random video", videos_path
+
+
+%script{:src => "https://www.youtube.com/iframe_api", :type => "text/javascript"}
+:javascript
+  var player;
+  function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        events: {
+          'onStateChange': onPlayerStateChange
+        }
+      });
+  }
+
+  function onPlayerStateChange(event) {
+      if(event.data === 0) {
+          location.reload (true);
+      }
+  }
