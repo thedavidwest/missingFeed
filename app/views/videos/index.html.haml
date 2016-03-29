@@ -1,4 +1,3 @@
-%p#notice= notice
 .header
   .header_info
     .logo
@@ -21,6 +20,8 @@
         .buttons
           .random_button
             = link_to "random video", videos_path
+          .showall_button
+            = link_to "+ add video", new_video_path
           .showall_button
             = link_to "all videos", pages_videos_path
 

@@ -9,7 +9,7 @@
 .back_button
   = link_to 'Back to Random', videos_path
 .mobile_container_all
-  - @video.each do |video|
+  - @video.reverse_each do |video|
     .video_wrapper_all
       .video_content
         %img.ratio{:src => "http://placehold.it/16x9"}/
