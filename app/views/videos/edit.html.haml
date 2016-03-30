@@ -1,0 +1,9 @@
+.mobile_container
+  .new_form
+    %h1 Editing Video
+    = render 'form'
+    .form_buttons
+      .random_button
+        = link_to 'Back', videos_path
+        = link_to 'Show', @video
+        = link_to 'Delete', @video, method: :delete, data: {confirm: "You sure?"}
