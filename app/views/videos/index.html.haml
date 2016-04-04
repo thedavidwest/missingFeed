@@ -25,22 +25,19 @@
           .showall_button
             = link_to "all videos", pages_videos_path
 
-
 %script{:src => "https://www.youtube.com/iframe_api", :type => "text/javascript"}
 :javascript
-  $( document ).ready(function() {
-    var player;
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          events: {
-            'onStateChange': onPlayerStateChange
-          }
-        });
-    }
-
-    function onPlayerStateChange(event) {
-        if(event.data === 0) {
-            location.reload (true);
+  var player;
+  function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        events: {
+          'onStateChange': onPlayerStateChange
         }
-    }
-  });
+      });
+  }
+
+  function onPlayerStateChange(event) {
+      if(event.data === 0) {
+          location.reload (true);
+      }
+  }
